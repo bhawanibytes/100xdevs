@@ -9,5 +9,9 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    stratTime = new Date()
+    console.log('Sum of numbers from 1 to ' + n + ' is: ' + n*(n+1)/2);
+    endTime = new Date() - stratTime;
+    console.log('This computation took ' + endTime + ' milliseconds, to complete');
 }
+calculateTime(1000000000)

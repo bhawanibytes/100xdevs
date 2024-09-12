@@ -4,6 +4,19 @@
 */
 
 function isPalindrome(str) {
+  //let's filter the str
+  let filterStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  console.log(filterStr);
+  //check if it palidrome or not  
+  left = 0
+  right = filterStr.length -1
+  while (left<right) {
+    if (filterStr[left] !== filterStr[right]) {
+      return false      
+    }
+    left++
+    right--
+  }
   return true;
 }
 

@@ -6,6 +6,16 @@
 */
 
 function countVowels(str) {
+  let count = 0
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  let arrOfStr = str.toLowerCase().split('')
+  arrOfStr.forEach(letter => {
+    let foundVowel = vowels.find( element => element === letter)
+    if (foundVowel) {
+      count++
+    }
+  });
+  return count
     // Your code here
 }
 

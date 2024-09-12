@@ -14,6 +14,18 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
+  let list = []
+  transactions.forEach(transaction => {
+    let catexist = list.find(element => element.category === transaction.category);
+    if (catexist) {
+      catexist.totalSpent += transaction.price      
+    } else {
+      list.push({
+          category: transaction.category,
+          totalSpent: transaction.price
+        })
+    }
+  });
   return [];
 }
 

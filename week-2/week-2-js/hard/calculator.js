@@ -16,6 +16,44 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+  constructor(){
+    this.result = 0
+  }
+  add(number){
+    this.result += number
+  }
+  subtract(number){
+    this.result -= number
+  }
+  multiply(number){
+    this.result *= number
+  }
+  divide(number){
+    if (number == 0){
+      throw new Error(number + " is can't devided by Zero");
+    } else {
+      this.result /= number
+    }
+  }
+
+  clear(){
+    this.result = 0
+  }
+
+  getResult(){
+    return this.result
+  }
+
+  calculate(str){
+    if (!/^[0-9\s\.\+\-\*\/\(\)]+$/.test(str)){
+      throw new Error("Wrong Format");
+    } else if (eval(str) === Infinity){
+      throw new Error(str + " is can't devided by Zero");
+    } else {
+      this.result = eval(str)
+    }
+  }
+}
 
 module.exports = Calculator;
