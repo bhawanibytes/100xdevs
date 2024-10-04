@@ -2,7 +2,7 @@ const { Router } = require("express");
 const { adminModel } = require("../db");
 const adminRouter = Router();
 const jwt = require("jsonwebtoken");
-const JWT_USER_PASSWORD = "ADMINALADIN"
+const { adminMiddleware } = require("../middleware/admin");
 
 adminRouter.post("/signup", async function (req, res) {
     const { email, password, firstName, lastName } = req.body
@@ -26,7 +26,7 @@ adminRouter.post("/signin", async function (req, res)  {
     if(admin){
         const token = jwt.sign({
             id: admin._id
-        }, JWT_USER_PASSWORD)
+        }, `${process.env.JWT_ADMIN_PASSWORD}`)
         // Do cookie logic
         res.status(200).json({
             token: token
@@ -37,9 +37,16 @@ adminRouter.post("/signin", async function (req, res)  {
     })
 })
 
-adminRouter.post("/course", (req, res) => {
+adminRouter.post("/course", adminMiddleware, async function (req, res) {
+    const adminId = req.userId;
+    const { title, description, imgUrl, price } = req.body;
+
+    const course = await courseModel.create({
+        title, description, imgUrl, price, creatorId: userId
+    })
     res.json({
-        message: "signup endpoint"
+        message: "Course created",
+        courseId: course._id
     })
 })
 
