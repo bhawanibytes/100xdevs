@@ -1,7 +1,9 @@
 const { Router } = require("express");
-const { userModel } = require("../db");
+const { userModel, purchaseModel, courseModel } = require("../db");
 const userRouter = Router();
 const jwt = require("jsonwebtoken");
+const { userMiddleware } = require("../middleware/user");
+const course = require("./course");
 
 userRouter.post("/signup", async function(req, res) {
     console.log("Incoming data:", req.body);
@@ -48,9 +50,17 @@ userRouter.post("/signin", async function (req, res)  {
     }
 })
 
-userRouter.post("/purchase", (req, res) => {
+userRouter.post("/purchases", userMiddleware, async function (req, res)  {
+    const userId = req.userId
+    const purchases =  await purchaseModel.find({
+        userId
+    })
+    const courseData = await courseModel.find({
+        _id: { $in: purchases.map( x => x.courseId) }
+    })
     res.json({
-        message: "signup endpoint"
+        purchases,
+        courseData
     })
 })
 
