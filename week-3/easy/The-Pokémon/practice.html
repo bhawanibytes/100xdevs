@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script> 
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="input-form">
+        <div class="form-body">
+            <div class="category">
+                Choose Category <input type="text" id="category">
+            </div>
+            <br>
+            <div>
+                Number of Cards <input type="number" id="numberOfCards" min="1" >
+            </div>
+            <br>
+            <span class="submit">
+                Submit
+            </span>
+        </div>
+    </div>
+    <!-- <div class="card-container-outside">
+        <div class="card-container">
+
+        </div>
+    </div> -->
+    <div class="card-container-outside">
+        <div class="card-container">
+            <div class="pokemon-cards" style="">
+                <!-- Top section with HP -->
+                <div class="hp">HP + API DATA</div>
+                
+                <!-- Main section with image, name, and category -->
+                <div class="card-main">
+                    <img src="https://example.com/pokemon-image.png" alt="Pokemon">
+                    <h2>bulbasaur</h2>
+                    <h3>grass</h3>
+                </div>
+    
+                <!-- Bottom section with stats -->
+                <div class="card-bottom">
+                    <!-- Attack -->
+                    <div class="attack-box">
+                        <div class="attack-stats">API Data</div>
+                        <div class="bottom-text">Attack</div>
+                    </div>
+                    <!-- Defence -->
+                    <div class="defence-box">
+                        <div class="defence-stats">API Data</div>
+                        <div class="bottom-text">Defence</div>
+                    </div>
+                    <!-- Speed -->
+                    <div class="speed-box">
+                        <div class="speed-stats">API Data</div>
+                        <div class="bottom-text">Speed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

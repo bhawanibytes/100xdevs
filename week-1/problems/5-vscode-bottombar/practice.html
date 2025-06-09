@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            background-color: rgb(26, 24, 24);
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            color: white;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            width:85%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        #left{
+            margin: 20px;
+            line-height: 1.5;
+            padding-right: 50px;
+        }
+        #left h1{
+            font-weight: 500;
+        }
+       
+        #right {
+            margin: 18px 0px 0px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .grid-lines{
+            margin: 3px;
+            display: flex;
+        }
+        .grid-lines h3{
+            margin: 10px;
+            font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important;
+            font-size: 16px;
+            font-weight: 200;
+            padding: 2px 4px;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="horizontal-center">
+                <h1>Code in any language</h1>
+            </div><br>
+            <p>VS Code supports almost every major programming language. Several ship in the box, like JavaScript, TypeScript, CSS, and HTML, but extensions for others can be found in the VS Code Marketplace.</p>
+        </div>
+        <div id="right">
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-js.png" alt="JavaScript">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-ts.png" alt="TypeScript">
+                <h3>TypeScript</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-python.png" alt="Python">
+                <h3>Python</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-cs.png" alt="C#">
+                <h3>C#</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-cpp.png" alt="C++">
+                <h3>C++</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-html.png" alt="HTML">
+                <h3>HTML</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-java.png" alt="Java">
+                <h3>Java</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-json.png" alt="JSON">
+                <h3>JSON</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-php.png" alt="PHP">
+                <h3>PHP</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-markdown.png" alt="Markdown">
+                <h3>Markdown</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-powershell.png" alt="Powershell">
+                <h3>Powershell</h3>
+            </div>
+            <div class="grid-lines">
+                <img src="https://code.visualstudio.com/assets/home/language-yaml.png" alt="YAML">
+                <h3>YAML</h3>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

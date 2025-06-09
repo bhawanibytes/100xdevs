@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        #left{
+            background-color: red;
+        }
+        #horizontal-center{
+            display: flex;
+            justify-content: center;
+        }
+        #right {
+            background-color: blue;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="horizontal-center">
+                <h1>Left</h1>
+            </div>
+            <h3>text text text text text text text text text text text text text</h3>
+        </div>
+        <div id="right">
+            <h1>Right1</h1><h1>Right2</h1><h1>Right3</h1>
+            <h1>Right4</h1><h1>Right5</h1><h1>Right6</h1>
+            <h1>Right7</h1><h1>Right8</h1><h1>Righ9</h1>
+        </div>
+    </div>
+    
+</body>
+</html>
