@@ -1,3 +1,3 @@
+# Pokemon Card Generator
 
-# 100xdevs
-Practice of 100xdevs
+A Simple Pokemon Card Generator
