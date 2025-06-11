@@ -1,4 +1,4 @@
-function isLegal (user: userType): boolean {
+function isLegal (user: UserType): boolean {
     if (user.age<18){
         return false
     } else {
@@ -6,7 +6,7 @@ function isLegal (user: userType): boolean {
     }
 }
 
-interface userType {
+interface UserType {
     firstName: string,
     lastName: string,
     email: string,
